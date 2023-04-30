@@ -1,4 +1,4 @@
-package com.coding.ninja.synchronize;
+package com.coding.ninja.deadlock;
 
 public class DeadlockSolved {
    
