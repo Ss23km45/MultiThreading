@@ -1,6 +1,6 @@
 package com.coding.ninja.runnable;
 
-public class Thread1 implements Runnable {
+public class Thread1 extends Thread {
 
     //A BAsic method
 //    public void start(){
@@ -10,7 +10,16 @@ public class Thread1 implements Runnable {
 //    }
 
     public void run(){
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 5; i++) {
+
+            try {
+
+                wait();
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                throw new RuntimeException(e);
+            }
+            notify();
             System.out.println("Testing Thread1");
         }
     }
